@@ -37,18 +37,27 @@ function getOrdinalSuffix(i) {
 }
 
 // Creating variables for each of the days
-let dateToday = getFormattedDate(0);
-let datePlus1 = getFormattedDate(1);
-let datePlus2 = getFormattedDate(2);
-let datePlus3 = getFormattedDate(3);
-let datePlus4 = getFormattedDate(4);
-let datePlus5 = getFormattedDate(5);
-let datePlus6 = getFormattedDate(6);
-let datePlus7 = getFormattedDate(7);
+function updateDatesInHTML () {
+    //creating dates
+    let dateToday = getFormattedDate(0);
+    let datePlus1 = getFormattedDate(1);
+    let datePlus2 = getFormattedDate(2);
+    let datePlus3 = getFormattedDate(3);
+    let datePlus4 = getFormattedDate(4);
+    let datePlus5 = getFormattedDate(5);
+    let datePlus6 = getFormattedDate(6);
+    let datePlus7 = getFormattedDate(7);
 
-// testing
-console.log(dateToday);
-console.log(datePlus1);
-console.log(datePlus2);
-console.log(datePlus3);
-console.log(datePlus4);
+    //adding dates to htmls file
+    document.getElementById("date_today").innerText = dateToday;
+    document.getElementById("date_plus1").innerText = datePlus1;
+    document.getElementById("date_plus2").innerText = datePlus2;
+    document.getElementById("date_plus3").innerText = datePlus3;
+    document.getElementById("date_plus4").innerText = datePlus4;
+    document.getElementById("date_plus5").innerText = datePlus5;
+    document.getElementById("date_plus6").innerText = datePlus6;
+    document.getElementById("date_plus7").innerText = datePlus7;
+
+};
+//calling function
+updateDatesInHTML();
