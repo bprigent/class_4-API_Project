@@ -1,4 +1,4 @@
-//Dont read below, its secret
+//creating the API url to fetch data
 const weatherAPIKey = 'a8aa6a7bf2f7e0cd31f9c1cce752f174';
 const mainApiUrl = 'https://api.openweathermap.org/data/2.5/forecast?'
 const keyParam = `&appid=${weatherAPIKey}`;
@@ -8,11 +8,9 @@ const unitParam = '&units=metric';
 const countParam = '&cnt=5'
 const url = `${mainApiUrl}${locationParam}${countParam}${keyParam}${unitParam}`
 
-//testing
-console.log(url);
 
 
-// fetch weather data from API
+// fetch weather data from API with async function
 async function getWeather() {
 
     try {
@@ -31,14 +29,17 @@ async function getWeather() {
     }
 };
 
-// create object to store weather data
-let todayWeather = {};
 
+
+// Store promise value inside an object
+// create object
+let todayWeather = {};
 // store return of promise in the obj above
 async function storeDataInObj() {
     todayWeather.data = await getWeather();
-};  
+};
+//call the function to store data in object
 storeDataInObj();
 
-console.log(todayWeather);
+
 
