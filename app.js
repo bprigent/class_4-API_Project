@@ -1,6 +1,3 @@
-//get H1 elements, this is for testing
-const h1Element = document.getElementById("main_h1");
-
 // get formated date
 function getFormattedDate(daysFromToday) {
     const date = new Date();
