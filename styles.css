@@ -3,3 +3,8 @@
     padding: 16px;
     min-height: 300px;
 }
+
+.temp_indicator {
+    font-size: 24px;
+    font-weight: bold;
+}
